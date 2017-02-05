@@ -1,0 +1,41 @@
+SX_EOR = b'\x1F' # End of Response/Request
+SX_EOO = b'\x1E' # End of Object
+SXSTR_EOR = SX_EOR.decode('utf-8')
+SXSTR_EOO = SX_EOO.decode('utf-8')
+
+SX_HELLO = b'\x01'
+SX_ERROR_NAME_TAKEN = b'\x01'
+SX_ERROR_ALREADY_CONNECTED = b'\x02'
+SX_ERROR_INVALID_USERNAME = b'\x03'
+SX_ERROR_USERNAME_TOO_SHORT = b'\x04'
+SX_ERROR_USERNAME_TOO_LONG = b'\x05'
+
+SX_PING = b'\x02'
+SX_PING_RESPONSE = b'\x03' # Also the keepalive packet for client-to-server communication
+
+SX_SEARCH_OPPONENT = b'\x04'
+SX_NOW_SEARCHING = b'\x01'
+SX_OPPONENT_FOUND = b'\x02'
+
+SX_GAME_INFO = b'\x05'
+SX_GAME_PLAYER_CHIPS = b'\x01'
+SX_GAME_READY_TO_START = b'\x02'
+SX_GAME_DEAL_HAND = b'\x03'
+SX_GAME_DEAL_TABLE = b'\x04'
+SX_GAME_BLINDS = b'\x05'
+SX_GAME_BET = b'\x06'
+SX_GAME_POT = b'\x07'
+SX_GAME_DISCONNECT = b'\x08'
+# Do not use '\x09'
+SX_GAME_NOT_ENOUGH_PLAYERS = b'\x0B'
+SX_GAME_BUTTONS_CHAIRS = b'\x0C'
+SX_GAME_PLAYER_CHIPS_IN_POT = b'\x10'
+SX_GAME_PLAYER_CHAIR = b'\x11'
+SX_GAME_TABLE_FULL = b'\x12'
+SX_GAME_PLAYER_TURN = b'\x13'
+SX_GAME_FOLD = b'\x14'
+SX_GAME_PLAYER_HAND = b'\x15'
+SX_GAME_HAND_ENDED = b'\x16'
+SX_GAME_PLAYER_SIT_OUT = b'\x17'
+SX_GAME_CHAT_MESSAGE = b'\x18'
+SX_GAME_PLAYER_CARD_COUNT = b'\x19' # How many cards the player has in his hand
